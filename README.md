@@ -1,23 +1,36 @@
-# Vending_Machine
 # Vending Machine (Verilog HDL)
 
-A coin-operated vending machine implemented in **Verilog HDL** using a **datapath and FSM-based controller architecture**.  
-The design models item selection, coin insertion, balance update, and item dispensing logic.
+A coin-operated vending machine implemented in **Verilog HDL** using a **datapath + FSM-based controller architecture**.  
+The design supports item selection, coin insertion, balance update, and item dispensing.
 
 ---
 
-## 📌 Project Description
-- Datapath handles arithmetic, storage, and comparison operations
-- Controller (FSM) generates control signals based on system state
-- Fully verified using a Verilog testbench and waveform simulation
+##  Project Description
+- Datapath performs arithmetic, storage, and comparison operations
+- Controller is implemented as a **Finite State Machine (FSM)**
+- Design is fully verified using a testbench and waveform simulation
 
 ---
 
-## 📂 Project Files
+##  FSM States (Controller)
+
+| State | Description |
+|------|------------|
+| **IDLE** | System reset state, waits for start signal |
+| **ITEM_SELECT** | Loads selected item into item register |
+| **COIN_ACCEPT** | Accepts valid coin input |
+| **BAL_UPD** | Updates balance using adder or subtractor |
+| **DISPENSE** | Dispenses item and updates remaining balance |
+
+The FSM transitions are controlled using comparator outputs (`lt`, `gt`, `eq`).
+
+---
+
+##  Project Files
 
 | File | Description |
 |-----|------------|
-| `datapath.v` | Datapath RTL (MUX, registers, adder, subtractor, comparator) |
+| `datapath.v` | Datapath RTL (MUXes, registers, adder, subtractor, comparator) |
 | `controller.v` | FSM-based controller generating control signals |
 | `tb.v` | Testbench for functional verification |
 | `vending.vcd` | Simulation waveform dump |
@@ -27,18 +40,22 @@ The design models item selection, coin insertion, balance update, and item dispe
 
 ---
 
-## 🔁 How It Works (One-Liners)
+##  How It Works (One-Liners)
 - User selects an item
 - Item price is loaded into the price register
 - Valid coins are accepted and added to balance
-- Comparator checks balance vs price
+- Balance is compared with price
 - Item is dispensed when balance ≥ price
 
 ---
 
-## ▶️ How to Run / View
+##  Tools Used
+- **Verilog HDL** – RTL design and modeling  
+- **Icarus Verilog (iverilog)** – Compilation and simulation  
+- **GTKWave** – Waveform analysis  
+- **draw.io** – Datapath circuit diagram  
+- **VS Code** – Code editing
 
-### Run Simulation
-```bash
-iverilog -o simv datapath.v controller.v tb.v
-vvp simv
+
+
+
