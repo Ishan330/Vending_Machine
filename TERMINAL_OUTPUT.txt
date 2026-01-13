@@ -1,0 +1,32 @@
+PS C:\Users\ishan\OneDrive\verilog_projects\vending_machine> iverilog -o simv .\datapath.v .\controller.v .\tb.v        
+PS C:\Users\ishan\OneDrive\verilog_projects\vending_machine> vvp simv
+VCD info: dumpfile vending.vcd opened for output.
+TIME:                   0,PRICE:  x,COIN:  x,BALANCE:  x,DONE:x
+TIME:                   5,PRICE:  0,COIN:  0,BALANCE:  0,DONE:0
+TIME:                  55,PRICE:100,COIN:  0,BALANCE:  0,DONE:0
+TIME:                  75,PRICE:100,COIN:  5,BALANCE:  0,DONE:0
+TIME:                  85,PRICE:100,COIN:  5,BALANCE:  5,DONE:0
+TIME:                 105,PRICE:100,COIN:  5,BALANCE: 10,DONE:0
+TIME:                 115,PRICE:100,COIN: 10,BALANCE: 10,DONE:0
+TIME:                 125,PRICE:100,COIN: 10,BALANCE: 20,DONE:0
+TIME:                 145,PRICE:100,COIN: 10,BALANCE: 30,DONE:0
+TIME:                 165,PRICE:100,COIN: 10,BALANCE: 40,DONE:0
+TIME:                 175,PRICE:100,COIN: 20,BALANCE: 40,DONE:0
+TIME:                 185,PRICE:100,COIN: 20,BALANCE: 60,DONE:0
+TIME:                 205,PRICE:100,COIN: 20,BALANCE: 80,DONE:0
+TIME:                 215,PRICE:100,COIN: 10,BALANCE: 80,DONE:0
+TIME:                 225,PRICE:100,COIN: 10,BALANCE: 90,DONE:0
+TIME:                 235,PRICE:100,COIN: 20,BALANCE: 90,DONE:0
+TIME:                 245,PRICE:100,COIN: 20,BALANCE:110,DONE:0
+TIME:                 265,PRICE:100,COIN: 20,BALANCE:130,DONE:1
+TIME:                 275,PRICE:100,COIN: 20,BALANCE: 30,DONE:0
+TIME:                 285,PRICE:100,COIN: 20,BALANCE:  0,DONE:0
+.\tb.v:18: $finish called at 1000 (1s)
+PS C:\Users\ishan\OneDrive\verilog_projects\vending_machine> gtkwave vending.vcd
+
+GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+
+[0] start time.
+[1000] end time.
+GTKWAVE | Select one or more traces.
+GTKWAVE | Select one or more traces.
