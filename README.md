@@ -9,6 +9,8 @@ The design supports item selection, coin insertion, balance update, and item dis
 - Datapath performs arithmetic, storage, and comparison operations
 - Controller is implemented as a **Finite State Machine (FSM)**
 - Design is fully verified using a testbench and waveform simulation
+- Design uses parameterized item prices and coin values which can be changed as per requirement.
+- Code written in RTL style.
 
 ---
 
