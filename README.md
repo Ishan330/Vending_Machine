@@ -42,7 +42,7 @@ The FSM transitions are controlled using comparator outputs (`lt`, `gt`, `eq`).
 
 ---
 
-##  How It Works (One-Liners)
+##  How It Works 
 - User selects an item
 - Item price is loaded into the price register
 - Valid coins are accepted and added to balance
