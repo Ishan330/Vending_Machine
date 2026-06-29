@@ -63,7 +63,8 @@ architecture. The clock is routed through a dedicated BUFG global clock buffer.
 ---
 
 ##  Tools Used
-- **Verilog HDL** – RTL design and modeling  
+- **Verilog HDL** – RTL design and modeling
+- **AMD Vivado 2025.2** – FPGA Synthesis
 - **Icarus Verilog (iverilog)** – Compilation and simulation  
 - **GTKWave** – Waveform analysis  
 - **draw.io** – Datapath circuit diagram  
