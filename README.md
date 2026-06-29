@@ -42,6 +42,17 @@ The FSM transitions are controlled using comparator outputs (`lt`, `gt`, `eq`).
 
 ---
 
+## FPGA Synthesis
+
+Synthesized on Xilinx Artix-7 (xc7a35tcpg236-1) using AMD Vivado 2025.2.
+
+![Vending Machine Schematic](schematic_vending.png)
+
+The schematic shows two distinct blocks — datapath and controller — with 
+control signals flowing between them, confirming the Controller-Datapath 
+architecture. The clock is routed through a dedicated BUFG global clock buffer.
+---
+
 ##  How It Works 
 - User selects an item
 - Item price is loaded into the price register
